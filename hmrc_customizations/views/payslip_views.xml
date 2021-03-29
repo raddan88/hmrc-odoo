@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="hmrc_payslip_form" model="ir.ui.view">
+        <field name="name">hr.payslip.form</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll_community.view_hr_payslip_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button string="Send To HMRC" name="send_to_hmrc" type="object"/>
+                <button string="Check HMRC Submission Status" name="poll_hmrc_submission_status" type="object"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

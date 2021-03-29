@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+        <record id="tax_system_default" model="res.tax.system">
+            <field name="code">None</field>
+            <field name="name">None</field>
+        </record>
+    </data>
+
+</odoo>

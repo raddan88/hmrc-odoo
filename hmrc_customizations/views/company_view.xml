@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="company_hmrc_details_form" model="ir.ui.view">
+        <field name="name">company.hmrc.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="taxation_integration_erpify.inherit_company_taxation_erpify" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='integration_details']" position="inside">
+                <group attrs="{'invisible': [('tax_system_code', '!=', 'HMRC')]}">
+                    <field name="hmrc_aoref"/>
+                    <field name="hmrc_cotaxref"/>
+                    <!-- <field name="hmrc_client_id"/>
+                    <field name="hmrc_client_secret" password="True" />
+                    <field name="hmrc_access_token" invisible="1" />
+                    <separator />
+
+                    <div class="o_row">
+                        <button name="authorize" string="Authorize" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('hmrc_client_id', '=', False), ('hmrc_client_secret', '=', False), ('hmrc_access_token', '!=', False)]}" />
+                        <button name="check_connectivity" string="Check Connectivity" type="object" class="oe_highlight" attrs="{'invisible': [('hmrc_access_token', '=', False)]}" />
+                    </div> -->
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

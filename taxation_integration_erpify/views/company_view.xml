@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="inherit_company_taxation_erpify" model="ir.ui.view">
+		<field name="name">taxation_company.form.erpify</field>
+		<field name="model">res.company</field>
+		<field name="inherit_id" ref="base.view_company_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//page" position="after">
+				<page name="taxation_erpify" string="Taxation">
+					<label for="tax_system_id"/>
+					<div>
+						<field name="tax_system_id" class="oe_inline" required="1"/>
+						<field name="tax_system_code" invisible="1"/>
+					</div>
+					<h4>Integration Details</h4>
+					<group name="integration_details">						
+					</group>
+				</page>
+			</xpath>
+		</field>
+	</record>
+</odoo>

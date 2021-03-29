@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+        <record id="tax_system_hmrc" model="res.tax.system">
+            <field name="code">HMRC</field>
+            <field name="name">UK (HMRC)</field>
+        </record>
+    </data>
+
+</odoo>
